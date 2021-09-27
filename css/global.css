@@ -1,0 +1,28 @@
+:root {
+  --clr-bg: #34343d;
+  --clr-dark: #934e46;
+  --clr-light: #efd2cb;
+  --clr-highlight: #a9f0d1;
+  --clr-nav: #bd766d;
+  --clr-blue: #2c647c;
+}
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--clr-bg);
+  color: var(--clr-light);
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--clr-highlight);
+}
+
+.wrapper {
+  margin-top: 80px;
+}

@@ -1,0 +1,62 @@
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 -2px 30px rgba(44, 26, 23, 0.5);
+  transition: all ease-in-out 0.3s;
+}
+
+.navbar {
+  position: relative;
+  background-color: var(--clr-nav);
+  display: block;
+  height: 80px;
+  width: 100vw;
+}
+
+nav ul {
+  list-style-type: none;
+  position: absolute;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  right: 4%;
+}
+
+nav li {
+  align-self: center;
+  transition: all ease-in-out 0.5s;
+}
+
+nav li > a {
+  text-decoration: none;
+  color: var(--clr-light);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all ease-in-out 0.5s;
+}
+
+nav li > a:hover {
+  font-size: 18px;
+  color: white;
+}
+
+.nav-logo {
+  background-color: var(--clr-nav);
+  image-rendering: crisp-edges;
+  margin-left: 20px;
+  position: absolute;
+  height: 150%;
+  border: solid var(--clr-nav) 15px;
+  border-radius: 50%;
+  box-shadow: 0 -2px 10px -10px rgba(44, 26, 23, 0.7);
+  transition: all ease-in-out 0.8s;
+}
+
+/* nav-logo and nav-logo_hover are separate in order for scrolling logo on homepage to work */
+
+.nav-logo_hover:hover {
+  transform: rotateZ(20deg);
+  margin-left: 20px;
+  border-width: 12px;
+}
