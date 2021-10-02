@@ -10,24 +10,23 @@ var logo = document.getElementById("nav-logo"),
 
 logo.classList.remove("nav-logo_hover");
 
-//gets rid of javascript if width is under 950 px
+//gets rid of javascript if width is under 1150 px
 
-if (window.matchMedia("(max-width: 1151px)").matches) {
-    isLogoAnimated = true;
+if (window.matchMedia("(max-width: 1051px)").matches) {
+    isLogoAnimated = false;
     logo.classList.remove("nav-logo_scaling");
 }
 
 window.addEventListener("resize", function (event) {
-    if (window.matchMedia("(min-width: 1151px)").matches) {
-        isLogoAnimated = true;
-        logo.classList.add("nav-logo_scaling");
-    }
-    else {
+    if (window.matchMedia("(max-width: 1051px)").matches) {
         logo.classList.remove("nav-logo_scaling");
         isLogoAnimated = false;
         logo.setAttribute("style", " ");
     }
-
+    else {
+        isLogoAnimated = true;
+        logo.classList.add("nav-logo_scaling");
+    }
 });
 
 //logo animation
@@ -35,7 +34,7 @@ window.addEventListener("scroll", function (event) {
     if (isLogoAnimated) {
         scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
         logoSize = initialLogoSize - scrollPos / 1.1;
-        logoTop = 40 - scrollPos / 4;
+        logoTop = 25 - scrollPos / 4;
         if (logoTop < 0)
             logoTop = 0;
         if (logoSize < 120)

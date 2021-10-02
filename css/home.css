@@ -16,29 +16,30 @@ nav {
   transition: all ease-in-out 0.6s;
 }
 
-.banner-title {
+.banner-container {
   background-color: #64453d;
   width: 100vw;
-  height: 45vw;
+  height: 90vh;
   overflow: hidden;
 }
 
 .bg-splash {
   position: absolute;
   width: 100vw;
-  height: 45vw;
+  height: 90vh;
   overflow: hidden;
 }
 
 #bg-splash-logo {
   position: absolute;
-  top: -20px;
+  top: -10px;
   z-index: 1;
   width: 1600px;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
 
 #BG {
+  bottom: 0;
   position: absolute;
   min-width: 100vw;
   max-width: 120vw;
@@ -54,7 +55,7 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
-  height: 45vw;
+  height: 90vh;
   z-index: 1;
 }
 
@@ -93,18 +94,25 @@ nav {
 }
 
 /* title text responsiveness */
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1255px) {
   #title-text {
-    font-size: 8vw;
-    letter-spacing: 6vw;
+    top: 65%;
   }
 }
 
-@media screen and (max-width: 1151px) {
+@media screen and (max-width: 1150px) {
+  #title-text {
+    font-size: 8vw;
+    letter-spacing: 6vw;
+    top: 64.5%;
+  }
+}
+
+@media screen and (max-width: 1051px) {
   #title-text {
     font-size: 9vw;
     letter-spacing: 7vw;
-    top: 50%;
+    top: 60%;
   }
 
   #bg-splash-logo {
@@ -113,6 +121,10 @@ nav {
 
   .banner-photo > img {
     height: 140%;
-    top: -90px;
+    top: -100px;
+  }
+
+  .navbar {
+    box-shadow: 0 -2px 30px rgba(44, 26, 23, 0.5);
   }
 }
